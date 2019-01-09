@@ -1,0 +1,20 @@
+{
+  "name": "react-chess",
+  "version": "1.0.0",
+  "description": "Chess built in React for practice using it.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next"
+  },
+  "keywords": [
+    "chess",
+    "react"
+  ],
+  "author": "Anju S.",
+  "license": "GPL-3.0-only",
+  "dependencies": {
+    "next": "^7.0.2",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
+  }
+}
