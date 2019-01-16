@@ -20,16 +20,31 @@ class ChessPiece extends React.Component {
         else {
             throw "please provide a chess piece OR information to create one"
         }
+    }
 
+    onClick = () => {
+        if (this.piece.pendingMovement) {
+            delete this.piece.pendingMovement
+        }
+        else {
+            this.piece.pendingMovement =
+                Object.assign({}, this.piece.pendingMovement)
+        }
+        this.forceUpdate()
     }
 
     render() {
         //Location in a shorter form
         const location = this.piece.location
+        //with pending movement display differently
+        var border = "none"
+        if (this.piece.pendingMovement) {
+            border = "1px solid salmon"
+        }
         //Then return that container (mainly for style)
         //With the character it's rendered as
         return (
-            <div>
+            <div onClick={this.onClick}>
                 {this.piece.renderCharacter}
                 <style jsx>
                     {`
@@ -41,6 +56,7 @@ class ChessPiece extends React.Component {
                         width:100px;
                         height:100px;
                         user-select:none;
+                        border:${border};
                     }`}
                 </style>
             </div>

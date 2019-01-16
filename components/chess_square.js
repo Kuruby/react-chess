@@ -3,11 +3,15 @@ import React from 'react'
 
 //A square on the board, with helper methods for piece moving, etc
 class ChessSquare extends React.Component {
+
+    onClick = () => {
+
+    }
     render() {
         //simplify X and Y location values
         const xvalue = this.props.location.xvalue
         const yvalue = this.props.location.yvalue
-        return (<div>
+        return (<div onClick={this.onClick}>
             <style jsx>{`
                         grid-column: ${xvalue + 1};
                         grid-row: ${yvalue + 1};
