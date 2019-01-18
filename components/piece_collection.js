@@ -10,12 +10,12 @@ class PieceCollection extends React.Component {
         return (<>
             {
                 collection.white.map((piece) => (
-                    <ChessPiece piece={piece} />
+                    <ChessPiece piece={piece} key={piece.toString()} />
                 ))
             }
             {
                 collection.black.map((piece) => (
-                    <ChessPiece piece={piece} />
+                    <ChessPiece piece={piece} key={piece.toString()} />
                 ))
             }
         </>)

@@ -7,11 +7,20 @@ class ChessSquare extends React.Component {
     onClick = () => {
 
     }
+
+    onMouseEnter = ()=>{
+
+    }
+
+    onMouseLeave = ()=>{
+
+    }
+    
     render() {
         //simplify X and Y location values
         const xvalue = this.props.location.xvalue
         const yvalue = this.props.location.yvalue
-        return (<div onClick={this.onClick}>
+        return (<div onClick={this.onClick} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
             <style jsx>{`
                         grid-column: ${xvalue + 1};
                         grid-row: ${yvalue + 1};
